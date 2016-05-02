@@ -80,7 +80,7 @@ EnemyTank.prototype.update = function() {
 
 //Game main function ===============================================================
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(360, 500, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
 
 function preload () {
 
@@ -117,7 +117,7 @@ var nextFire = 0;
 function create () {
 
     //  Resize our game world to be a 2000 x 2000 square; center at (0,0)
-    game.world.setBounds(-1000, -1000, 2000, 2000);
+    game.world.setBounds(-1000, -1000, 360, 500);
 
     //  Our tiled scrolling background
     land = game.add.tileSprite(0, 0, 800, 600, 'earth');
